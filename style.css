@@ -1,22 +1,103 @@
+/* ===== Dasar halaman ===== */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f0f2f5;
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #1f2937;
 }
 
 h1 {
-  color: #333;
+  color: #1f2937;
+  margin-bottom: 24px;
 }
 
-/* Ini buat kotak per-transaksi */
+h2 {
+  color: #374151;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* ===== Kartu per-transaksi ===== */
 .kartu-transaksi {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 16px 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #4f46e5; /* garis aksen warna ungu di kiri kartu */
 }
 
 .kartu-transaksi p {
   margin: 6px 0;
+  font-size: 14px;
+}
+
+.kartu-transaksi p b {
+  color: #374151;
+  display: inline-block;
+  width: 110px; /* biar label sejajar rapi */
+}
+
+/* ===== Tombol di dalam kartu (Hapus & Edit) ===== */
+.kartu-transaksi button {
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.kartu-transaksi button:hover {
+  opacity: 0.85;
+}
+
+/* tombol Hapus (warna merah) */
+.kartu-transaksi button[onclick^="hapusTransaksi"] {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* tombol Edit (warna biru) */
+.kartu-transaksi button[onclick^="editTransaksi"] {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+/* ===== Form tambah transaksi ===== */
+input[type="text"],
+input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #4f46e5;
+}
+
+/* tombol Tambah (warna ungu, paling menonjol) */
+button[onclick="tambahTransaksiBaru()"] {
+  padding: 10px 18px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+button[onclick="tambahTransaksiBaru()"]:hover {
+  opacity: 0.9;
 }

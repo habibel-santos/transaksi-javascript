@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Daftar Transaksi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Daftar Transaksi</h1>
@@ -11,9 +11,10 @@
     <div id="daftar-transaksi"></div>
 
     <h2>Tambah Transaksi</h2>
-    <input type="text" id="input-invoice" placeholder="No. Invoice">
-    <input type="number" id="input-total" placeholder="Total">
+    <input type="text" id="input-invoice" placeholder="No. Invoice" />
+    <input type="number" id="input-total" placeholder="Total" />
     <button onclick="tambahTransaksiBaru()">Tambah</button>
+    <button onclick="exportKeJSON()">Simpan / Download JSON</button>
 
     <script src="index.js"></script>
   </body>
